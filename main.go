@@ -29,6 +29,7 @@ func main() {
 	}
 	for i = 1; i <= endnum; i++ {
 		url := fmt.Sprintf(config["wallhaven_catch_url"]+`&page=%d`, i)
+		fmt.Println(url)
 		catcher.Catch(url, "", "")
 	}
 	defer recordPage(i)

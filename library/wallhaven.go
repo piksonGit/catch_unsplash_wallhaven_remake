@@ -22,7 +22,7 @@ func (wall *Wallhaven) SetLimit() {
 	wall.c.Limit(&colly.LimitRule{
 		DomainRegexp: `wallhaven\.cc`,
 		//Delay:        10 * time.Second,
-		RandomDelay: 10 * time.Second,
+		RandomDelay: 3 * time.Second,
 		Parallelism: 12,
 	})
 }
